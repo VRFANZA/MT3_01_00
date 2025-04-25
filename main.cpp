@@ -44,6 +44,16 @@ Matrix4x4 MakePerspectiveFovMatrix(float fovY, float aspectRatio, float nearClip
 /// <returns>正射影行列</returns>
 Matrix4x4 MakeOrthographicMatrix(float left, float top, float right, float bottom, float nearClip, float farClip);
 
+/// <summary>
+/// ビューポート行列作成関数
+/// </summary>
+/// <param name="left">左側の座標</param>
+/// <param name="top">上側の座標</param>
+/// <param name="width">切り取るスクリーンの幅</param>
+/// <param name="height">切り取るスクリーンの高さ</param>
+/// <param name="minDepth">最小深度値</param>
+/// <param name="maxDepth">最大深度値</param>
+/// <returns></returns>
 Matrix4x4 MakeViewportMatrix(float left, float top, float width, float height, float minDepth, float maxDepth);
 
 // Windowsアプリでのエントリーポイント(main関数)
